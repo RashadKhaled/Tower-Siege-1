@@ -3,7 +3,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Constraint= Matter.Constraint
-
+var score=0
 function setup() {
   createCanvas(1300,400);
   createSprite(400, 200, 50, 50);
@@ -32,16 +32,27 @@ function draw() {
   ground.display()
   platform.display()
   box1.display()
+  box1.score()
   box2.display()
+  box2.score()
   box3.display()
+  box3.score()
   box4.display()
+  box4.score()
   box5.display()
+  box5.score()
   box6.display()
+  box6.score()
   box7.display()
+  box7.score()
   box8.display()
+  box8.score()
   box9.display()
+  box9.score()
   polygon.display()
   slingshot.display()
+  textSize(20);
+  text("Score:"+score,20,20)
 }
 function mouseDragged(){
   Matter.Body.setPosition(polygon.body,{x:mouseX,y:mouseY})

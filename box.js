@@ -36,5 +36,10 @@ class Box {
         }
         
     }
+    score(){
+      if(this.visibility==-5){
+        score=score+50
+      }
+    }
   };
   
